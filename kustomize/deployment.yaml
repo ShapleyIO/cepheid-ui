@@ -1,20 +1,20 @@
-# deployment.yaml for iam-ui
+# deployment.yaml for cepheid-ui
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: iam-ui
+  name: cepheid-ui
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: iam-ui
+      app: cepheid-ui
   template:
     metadata:
       labels:
-        app: iam-ui
+        app: cepheid-ui
     spec:
       containers:
-      - name: iam-ui
-        image: shapl3y/iam-ui:latest
+      - name: cepheid-ui
+        image: shapley/cepheid-ui:latest
         ports:
         - containerPort: 8080
